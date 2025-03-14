@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Univers Light", sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    
+    #nav {
+      background-color: #4D4D4D;
+    }
+    
+    #home .text-lg {
+      color: white;
+      font-weight: lighter;
+    }
+    
+    #menu {
+      font-weight: lighter;
+      a {
+        color: white;        
+      }
+      a:hover {
+        color: orange;
+      }
+    }
+
+    #banner {
+      background-color: #BAB496;
+    }
+  }
+}
+
+@layer components {
+  main {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .heading-xl {
+    @apply font-display text-6xl md:text-7xl lg:text-8xl font-bold tracking-supertight leading-supertight;
+  }
+  
+  .heading-lg {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-supertight leading-supertight;
+  }
+  
+  .heading-md {
+    @apply font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+  
+  .heading-sm {
+    @apply font-display text-xl md:text-2xl font-bold tracking-tight;
+  }
+  
+  .text-caption {
+    @apply text-xs uppercase tracking-superwide font-medium;
+  }
+  
+  .text-body {
+    @apply text-base leading-relaxed;
+  }
+  
+  .text-body-lg {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .link-hover {
+    @apply transition-colors duration-200 hover:text-gray-900;
+  }
+  
+  .card {
+    @apply bg-white border border-gray-200 overflow-hidden hover:border-gray-300 transition-colors duration-200;
+    width: 100%;
+  }
+  
+  .card-hover {
+    @apply hover:bg-gray-50 transition-colors duration-200;
+  }
+  
+  .button-primary {
+    @apply bg-gray-900 text-white hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .button-secondary {
+    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .input {
+    @apply bg-white border border-gray-200 rounded-lg px-4 py-2 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition duration-200;
+  }
+}
+
+/* Custom scrollbar styles */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+    background-color: #D1D5DB;
+    border-radius: 6px;
+  }
+
+  .scrollbar-track-gray-100::-webkit-scrollbar-track {
+    background-color: #F3F4F6;
+    border-radius: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+}
