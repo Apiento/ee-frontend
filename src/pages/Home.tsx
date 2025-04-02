@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { MessageSquare, Store, Calendar, Radio, Music, Globe, MessageCircle, ChevronDown } from 'lucide-react';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {Calendar, MessageCircle, MessageSquare, Music, Radio, Store, User} from 'lucide-react';
 
 export function Home() {
   const [showAllReleases, setShowAllReleases] = useState(false);
@@ -47,61 +47,74 @@ export function Home() {
   ];
 
   return (
-    <div className="space-y-12">
-      <div className="grid md:grid-cols-3 gap-8">
-        <Link to="/store" className="card card-hover">
-          <div className="p-6">
-            <Store className="w-8 h-8 mb-4 text-green-600" />
-            <h2 className="text-xl font-display font-semibold text-gray-900 mb-2">Discover Music</h2>
-            <p className="text-gray-600">Browse and purchase high-quality digital products.</p>
+    <div>
+      <div className="grid md:grid-cols-3">
+        <Link to="/store" className="card card-hover" id="music">
+          <div className="p-1 px-6 py-4 col-span-1">
+            <h2 className="font-display tracking-tight">
+              <Store className="w-7 h-7" strokeWidth={0.9} />
+              &nbsp;discover music
+            </h2>
+            <p className="font-display tracking-tight">browse and purchase high-quality digital products.</p>
           </div>
         </Link>
 
-        <Link to="/events" className="card card-hover">
-          <div className="p-6">
-            <Calendar className="w-8 h-8 mb-4 text-blue-600" />
-            <h2 className="text-xl font-display font-semibold text-gray-900 mb-2">Discover Events</h2>
-            <p className="text-gray-600">Discover and book tickets for upcoming events.</p>
+        <Link to="/events" className="card card-hover" id="events">
+          <div className="p-1 px-6 py-4 col-span-1">
+            <h2 className="font-display tracking-tight">
+              <Calendar className="w-7 h-7" strokeWidth={0.9} />
+              &nbsp;discover events
+            </h2>
+            <p className="font-display tracking-tight">discover and book tickets for upcoming events.</p>
           </div>
         </Link>
 
-        <Link to="/forum" className="card card-hover">
-          <div className="p-6">
-            <MessageSquare className="w-8 h-8 mb-4 text-blue-600" />
-            <h2 className="text-xl font-display font-semibold text-gray-900 mb-2">Forum</h2>
-            <p className="text-gray-600">Join discussions on various topics with our community members.</p>
+        <Link to="/forum" className="card card-hover" id="forum">
+          <div className="p-1 px-6 py-4 col-span-1">
+            <h2 className="font-display tracking-tight">
+              <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
+              &nbsp;forum
+            </h2>
+            <p className="font-display tracking-tight">join discussions with our community members.</p>
           </div>
         </Link>
       </div>
 
-      <section className="card">
-        <div id="banner" className="p-6 border-b border-gray-200">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+      <section>
+        <div id="banner" className="p-2 border-b border-gray-200">
+          <div className="flex items-center justify-between grid md:grid-cols-3">
+            <div className="flex items-center space-x-3 col-span-1 px-4">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-6 h-6 rounded-full object-cover"
               />
-              <div>
-                <h2 className="text-xl font-display font-semibold text-gray-900">Apiento's Feed</h2>
-                <div className="flex items-center text-sm text-blue-600">
-                  <Radio className="w-4 h-4 mr-1" />
-                  <span>Currently Live</span>
-                </div>
+              <h2 className="text-xl font-display tracking-tight mb-2">apiento's feed</h2>
+            </div>
+            <div className="col-span-1">
+              <div className="flex items-center text-sm">
+                <Radio className="w-8 h-8 mr-1" strokeWidth={1.5} />
+                <span className="font-display tracking-tight mb-2">currently live</span>
               </div>
             </div>
-            <Link to="/profile" className="text-blue-600 hover:text-blue-700 text-sm">
-              View Profile
-            </Link>
+            <div className="col-span-1">
+              <div className="flex items-center text-sm">
+                <User className="w-8 h-8" strokeWidth={1.5} />&nbsp;
+                <Link to="/profile" className="font-display tracking-tight mb-2">
+                  view profile
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
+      <section id="feeds">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-          <div className="space-y-4">
+          <div className="space-y-4" id="releases">
             <div className="flex items-center space-x-2 text-sm">
-              <Music className="w-4 h-4 text-green-600" />
-              <h3 className="font-medium text-gray-900">Latest Releases</h3>
+              <Music className="w-8 h-8" strokeWidth={0.5} />
+              <h3 className="font-medium text-gray-900">latest releases</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {releases.map((release, index) => (
@@ -120,10 +133,10 @@ export function Home() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4" id="events">
             <div className="flex items-center space-x-2 text-sm">
-              <Calendar className="w-4 h-4 text-blue-600" />
-              <h3 className="font-medium text-gray-900">Upcoming Events</h3>
+              <Calendar className="w-8 h-8" strokeWidth={0.5} />
+              <h3 className="font-medium text-gray-900">upcoming events</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {events.map((event, index) => (
@@ -146,10 +159,10 @@ export function Home() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4" id="threads">
             <div className="flex items-center space-x-2 text-sm">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <h3 className="font-medium text-gray-900">Your Threads</h3>
+              <MessageCircle className="w-8 h-8" strokeWidth={0.5} />
+              <h3 className="font-medium text-gray-900">your threads</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {threads.map((thread, index) => (

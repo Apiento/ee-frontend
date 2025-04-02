@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link, Outlet, useNavigate} from 'react-router-dom';
 import { MessageSquare, Store, Calendar, User, Search, Users } from 'lucide-react';
-import { RadioPlayer } from './RadioPlayer';
-import { MusicPlayer } from './MusicPlayer';
+import {RadioPlayer} from './RadioPlayer';
+import {MusicPlayer} from './MusicPlayer';
 
 export function Layout() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,13 +19,12 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
       <RadioPlayer />
-      <nav className="bg-gray-100 border-b border-gray-200 sticky top-0 z-50">
+      <nav className="bg-gray-100 sticky top-0 z-50">
         <div id="nav" className="max-w-[1920px] mx-auto px-6">
           <div className="flex items-center justify-between h-18">
             <div id="home" className="flex items-center">
-              <Link to="/" className="font-display font-bold tracking-tight text-gray-900 hover:text-gray-900">
-                <div className="text-lg leading-none">Everything</div>
-                <div className="text-lg leading-none mt-0.5">Everywhere</div>
+              <Link to="/" className="font-display tracking-tight">
+                <div className="text-lg leading-none">everything everywhere</div>
               </Link>
             </div>
             
@@ -34,7 +33,7 @@ export function Layout() {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full bg-white text-gray-900 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900 border border-gray-200"
@@ -47,24 +46,24 @@ export function Layout() {
             </div>
             
             <div id="menu" className="hidden md:flex items-center space-x-8">
-              <Link to="/forum" className="text-orange-600 hover:text-gray-900 flex items-center">
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Forum
+              <Link to="/forum" className="font-display tracking-tight flex items-center">
+                <MessageSquare className="w-6 h-6 mr-2" strokeWidth={0.8} />
+                forum
               </Link>
-              <Link to="/store" className="text-orange-600 hover:text-gray-900 flex items-center">
-                <Store className="w-4 h-4 mr-2" />
-                Store
+              <Link to="/store" className="font-display tracking-tight flex items-center">
+                <Store className="w-6 h-6 mr-2" strokeWidth={0.8} />
+                store
               </Link>
-              <Link to="/events" className="text-orange-600 hover:text-gray-900 flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                Events
+              <Link to="/events" className="font-display tracking-tight flex items-center">
+                <Calendar className="w-6 h-6 mr-2" strokeWidth={0.8} />
+                events
               </Link>
-              <Link to="/community" className="text-orange-600 hover:text-gray-900 flex items-center">
-                <Users className="w-4 h-4 mr-2" />
-                Community
+              <Link to="/community" className="font-display tracking-tight flex items-center">
+                <Users className="w-6 h-6 mr-2" strokeWidth={0.8} />
+                community
               </Link>
-              <Link to="/profile" className="text-orange-600 hover:text-gray-900">
-                <User className="w-5 h-5" />
+              <Link to="/profile" className="font-display tracking-tight">
+                <User className="w-8 h-8" strokeWidth={0.5} />
               </Link>
             </div>
 
@@ -83,7 +82,7 @@ export function Layout() {
         </div>
       </nav>
 
-      <main className="flex-1 max-w-[1920px] mx-auto px-6 py-12 w-full">
+      <main className="flex-1 max-w-[1920px] mx-auto w-full">
         <Outlet />
       </main>
 

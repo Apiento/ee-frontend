@@ -4,30 +4,91 @@
 
 @layer base {
   html {
-    font-family: "Univers Light", sans-serif;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-    
+    .font-display {
+      font-family: "trade-gothic-next", sans-serif;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+
     #nav {
-      background-color: #4D4D4D;
+      background-color: rgb(77, 77, 77);
+      border-bottom: 1px solid rgb(155, 142, 142);
+      height: 4.6rem;
     }
-    
-    #home .text-lg {
+
+    #home .text-lg,
+    #menu a,
+    .card svg,
+    .card h2 {
       color: white;
-      font-weight: lighter;
+      font-weight: 200;
+      font-size: 30px;
     }
-    
+
     #menu {
-      font-weight: lighter;
-      a {
-        color: white;        
-      }
       a:hover {
-        color: orange;
+        text-decoration: underline;
       }
     }
 
     #banner {
       background-color: #BAB496;
+
+      h2,
+      a,
+      span,
+      svg {
+        font-weight: 200;
+        font-size: 30px;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    #feeds {
+      #releases, #events, #threads {
+        h3 {
+          font-weight: 300;
+          font-size: 30px;
+          color: black;
+        }
+        /*background-color: black;*/
+      }
+      /*#events {*/
+      /*  background-color: lightgray;*/
+      /*}*/
+      /*#threads {*/
+      /*  background-color: green;*/
+      /*}*/
+    }
+
+    .card {
+      border-bottom: 1px solid rgb(155, 142, 142);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      svg {
+        display: inline-block;
+      }
+
+      p {
+        color: white;
+        font-weight: 200;
+        font-size: 20px;
+      }
+    }
+
+    .card#music {
+      background-color: #007786;
+    }
+    .card#events {
+      background-color: #FFC145;
+    }
+    .card#forum {
+      background-color: #FF6B6C;
     }
   }
 }
