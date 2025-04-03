@@ -16,6 +16,10 @@
       background-color: rgb(77, 77, 77);
       border-bottom: 1px solid rgb(155, 142, 142);
       height: 4.6rem;
+
+      svg {
+        color: white;
+      }
     }
 
     #home .text-lg,
