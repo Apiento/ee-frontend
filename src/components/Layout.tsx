@@ -92,38 +92,38 @@ export function Layout() {
         <div className="max-w-[1920px] mx-auto px-6 py-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">About</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">about</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                The culture we believe in builds foundations.
+                the culture we believe in builds foundations.
               </p>
               <Link to="/about" className="text-blue-600 hover:text-blue-700 text-sm mt-4 inline-block">
-                Learn More
+                learn more
               </Link>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">Quick Links</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">quick links</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/forum" className="text-gray-600 hover:text-gray-900 text-sm">Forum</Link>
+                  <Link to="/forum" className="text-gray-600 hover:text-gray-900 text-sm">forum</Link>
                 </li>
                 <li>
-                  <Link to="/store" className="text-gray-600 hover:text-gray-900 text-sm">Store</Link>
+                  <Link to="/store" className="text-gray-600 hover:text-gray-900 text-sm">store</Link>
                 </li>
                 <li>
-                  <Link to="/events" className="text-gray-600 hover:text-gray-900 text-sm">Events</Link>
+                  <Link to="/events" className="text-gray-600 hover:text-gray-900 text-sm">events</Link>
                 </li>
                 <li>
-                  <Link to="/community" className="text-gray-600 hover:text-gray-900 text-sm">Community</Link>
+                  <Link to="/community" className="text-gray-600 hover:text-gray-900 text-sm">community</Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">Connect</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">connect</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Join our community and stay updated with the latest releases, events, and discussions.
+                join our community and stay updated with the latest releases, events, and discussions.
               </p>
               <div className="text-sm text-gray-500">
-                © 2024 Everything Everywhere. All rights reserved.
+                © 2024 everything everywhere. all rights reserved.
               </div>
             </div>
           </div>

@@ -56,7 +56,7 @@ export function Home() {
                 <Store className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;discover music
               </h2>
-              <p className="font-display tracking-tight">browse and purchase high-quality digital products.</p>
+              <p className="font-display tracking-tight">browse and purchase high-quality digital products</p>
             </div>
           </Link>
 
@@ -66,7 +66,7 @@ export function Home() {
                 <Calendar className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;discover events
               </h2>
-              <p className="font-display tracking-tight">discover and book tickets for upcoming events.</p>
+              <p className="font-display tracking-tight">discover and book tickets for upcoming events</p>
             </div>
           </Link>
 
@@ -76,7 +76,7 @@ export function Home() {
                 <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;forum
               </h2>
-              <p className="font-display tracking-tight">join discussions with our community members.</p>
+              <p className="font-display tracking-tight">join discussions with our community members</p>
             </div>
           </Link>
         </div>
@@ -89,7 +89,7 @@ export function Home() {
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-10 h-10 rounded-full object-cover ml-2"
+                className="w-8 h-8 rounded-full object-cover ml-2"
               />
               <h2 className="text-xl font-display tracking-tight ml-4">apiento's feed</h2>
             </div>
@@ -127,8 +127,8 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{release.title}</p>
-                    <p className="text-gray-600 text-xs">{release.artist}</p>
+                    <p className="text-gray-900 text-sm">{release.title.toLowerCase()}</p>
+                    <p className="text-gray-600 text-xs">{release.artist.toLowerCase()}</p>
                   </div>
                 </div>
               ))}
@@ -149,11 +149,11 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{event.title}</p>
+                    <p className="text-gray-900 text-sm">{event.title.toLowerCase()}</p>
                     <div className="flex items-center text-gray-600 text-xs">
-                      <span>{event.location}</span>
+                      <span>{event.location.toLowerCase()}</span>
                       <span className="mx-1">•</span>
-                      <span>{event.date}</span>
+                      <span>{event.date.toLowerCase()}</span>
                     </div>
                   </div>
                 </div>
@@ -175,9 +175,9 @@ export function Home() {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{thread.title}</p>
+                    <p className="text-gray-900 text-sm">{thread.title.toLowerCase()}</p>
                     <div className="flex items-center text-gray-600 text-xs">
-                      <span>{thread.author}</span>
+                      <span>{thread.author.toLowerCase()}</span>
                       <span className="mx-1">•</span>
                       <span>{thread.replies} replies</span>
                     </div>
