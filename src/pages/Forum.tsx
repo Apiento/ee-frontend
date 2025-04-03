@@ -63,17 +63,17 @@ export function Forum() {
 
       <EventsCarousel />
 
-      <div id="forum" className="flex flex-col md:flex-row gap-6">
+      <div id="forum" className="flex flex-col md:flex-row gap-6 m-6">
         {/* Filters Sidebar */}
         <div className="md:w-64 shrink-0 space-y-6">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
               placeholder="Search posts..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="input w-full pl-10"
+              className="input w-full pl-6"
             />
           </div>
 
@@ -125,11 +125,11 @@ export function Forum() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4 text-sm text-gray-500">
                         <div className="flex items-center">
-                          <Heart className="w-4 h-4 mr-1" />
+                          <Heart className="w-4 h-4 mr-1" strokeWidth={1.3} />
                           <span>{post.votes}</span>
                         </div>
                         <div className="flex items-center">
-                          <MessageSquare className="w-4 h-4 mr-1" />
+                          <MessageSquare className="w-4 h-4 mr-1" strokeWidth={1.3} />
                           <span>{post.replies} Replies</span>
                         </div>
                       </div>

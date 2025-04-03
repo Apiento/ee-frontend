@@ -61,7 +61,7 @@ export function EventsCarousel() {
   };
 
   return (
-    <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden group">
+    <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden group m-6">
       {/* Carousel slides */}
       <div className="relative h-full">
         {featuredEvents.map((event, index) => (

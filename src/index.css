@@ -29,9 +29,11 @@
       font-weight: 600;
     }
 
-    #labels .card p {
+    #labels .card p,
+    #labels .card svg,
+    #forum .card svg {
       color: black;
-      font-weight: 300;
+      font-weight: 200;
     }
 
     #menu {

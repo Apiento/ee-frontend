@@ -172,11 +172,11 @@ export function Events() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 m-6">
       <div className="flex flex-col space-y-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <h1 className="heading-lg p-6 text-gray-900">Events</h1>
+            <h1 className="heading-lg text-gray-900">Events</h1>
           </div>
           <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
             <button
@@ -212,8 +212,8 @@ export function Events() {
           </div>
         </div>
 
-        <div className="relative ml-5">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-gray-400" />
           </div>
           <input

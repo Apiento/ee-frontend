@@ -11,10 +11,10 @@ export function Store() {
 
   return (
     <div className="space-y-12">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ml-6 mt-6">
         <div>
-          <h1 className="heading-lg p-6 text-gray-900">Record Labels</h1>
-          <p className="text-body text-gray-600 ml-7">Discover and support independent music labels</p>
+          <h1 className="heading-lg text-gray-900">Record Labels</h1>
+          <p className="text-body text-gray-600 ml-1">Discover and support independent music labels</p>
         </div>
         <button 
           onClick={() => setIsCartOpen(true)}
@@ -26,7 +26,7 @@ export function Store() {
       </div>
 
       {/* Labels Grid */}
-      <div id="labels" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div id="labels" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ml-6">
         {mockLabels.map(label => (
           <Link
             key={label.id}
@@ -40,16 +40,16 @@ export function Store() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="p-6">
+            <div className="pt-6 pr-6 pb-6">
               <h2 className="text-lg font-display font-semibold text-gray-900 mb-2">{label.name}</h2>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">{label.description}</p>
               <div className="flex items-center text-sm text-gray-500 space-x-4">
                 <span className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-1" />
+                  <Calendar className="w-4 h-4 mr-1" strokeWidth={0.5} />
                   {label.founded}
                 </span>
                 <span className="flex items-center">
-                  <Globe className="w-4 h-4 mr-1" />
+                  <Globe className="w-4 h-4 mr-1" strokeWidth={0.5} />
                   {label.location}
                 </span>
               </div>
