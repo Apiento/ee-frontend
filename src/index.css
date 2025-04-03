@@ -4,9 +4,8 @@
 
 @layer base {
   html {
-    .font-display {
+    #root * {
       font-family: "fira-code", sans-serif;
-      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     }
 
     #nav {
