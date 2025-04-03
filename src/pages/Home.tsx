@@ -48,59 +48,61 @@ export function Home() {
 
   return (
     <div>
-      <div className="grid md:grid-cols-3">
-        <Link to="/store" className="card card-hover" id="music">
-          <div className="p-1 px-6 py-4 col-span-1">
-            <h2 className="font-display tracking-tight">
-              <Store className="w-7 h-7" strokeWidth={0.9} />
-              &nbsp;discover music
-            </h2>
-            <p className="font-display tracking-tight">browse and purchase high-quality digital products.</p>
-          </div>
-        </Link>
+      <section id="cards">
+        <div className="grid md:grid-cols-3 gap-6 px-6">
+          <Link to="/store" className="card card-hover border-b border-black" id="music">
+            <div className="py-4 col-span-1">
+              <h2 className="font-display tracking-tight">
+                <Store className="w-7 h-7" strokeWidth={0.9} />
+                &nbsp;discover music
+              </h2>
+              <p className="font-display tracking-tight">browse and purchase high-quality digital products.</p>
+            </div>
+          </Link>
 
-        <Link to="/events" className="card card-hover" id="events">
-          <div className="p-1 px-6 py-4 col-span-1">
-            <h2 className="font-display tracking-tight">
-              <Calendar className="w-7 h-7" strokeWidth={0.9} />
-              &nbsp;discover events
-            </h2>
-            <p className="font-display tracking-tight">discover and book tickets for upcoming events.</p>
-          </div>
-        </Link>
+          <Link to="/events" className="card card-hover border border-b-black" id="events">
+            <div className="py-4 col-span-1">
+              <h2 className="font-display tracking-tight">
+                <Calendar className="w-7 h-7" strokeWidth={0.9} />
+                &nbsp;discover events
+              </h2>
+              <p className="font-display tracking-tight">discover and book tickets for upcoming events.</p>
+            </div>
+          </Link>
 
-        <Link to="/forum" className="card card-hover" id="forum">
-          <div className="p-1 px-6 py-4 col-span-1">
-            <h2 className="font-display tracking-tight">
-              <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
-              &nbsp;forum
-            </h2>
-            <p className="font-display tracking-tight">join discussions with our community members.</p>
-          </div>
-        </Link>
-      </div>
+          <Link to="/forum" className="card card-hover border border-b-black" id="forum">
+            <div className="py-4 col-span-1">
+              <h2 className="font-display tracking-tight">
+                <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
+                &nbsp;forum
+              </h2>
+              <p className="font-display tracking-tight">join discussions with our community members.</p>
+            </div>
+          </Link>
+        </div>
+      </section>
 
-      <section>
-        <div id="banner" className="p-4 border-b border-gray-200">
-          <div className="flex items-center justify-between grid md:grid-cols-3">
-            <div className="flex items-center space-x-3 col-span-1 px-4">
+      <section id="banner">
+        <div className="p-4 border-b border-gray-200">
+          <div className="items-center justify-between grid md:grid-cols-3">
+            <div className="flex items-center space-x-3 col-span-1 mb-1 mt-1">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-10 h-10 rounded-full object-cover"
+                className="w-10 h-10 rounded-full object-cover ml-2"
               />
-              <h2 className="text-xl font-display tracking-tight">apiento's feed</h2>
+              <h2 className="text-xl font-display tracking-tight ml-4">apiento's feed</h2>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <Radio className="w-8 h-8 mr-1" strokeWidth={1.5} />
-                <span className="font-display tracking-tight">currently live</span>
+                <span className="font-display tracking-tight ml-4">currently live</span>
               </div>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <User className="w-8 h-8" strokeWidth={1.5} />&nbsp;
-                <Link to="/profile" className="font-display tracking-tight">
+                <User className="w-8 h-8" strokeWidth={1.5} />
+                <Link to="/profile" className="font-display tracking-tight ml-5">
                   view profile
                 </Link>
               </div>
