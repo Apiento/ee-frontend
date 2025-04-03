@@ -13,8 +13,8 @@ export function Store() {
     <div className="space-y-12">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="heading-lg text-gray-900 mb-2">Record Labels</h1>
-          <p className="text-body text-gray-600">Discover and support independent music labels</p>
+          <h1 className="heading-lg p-6 text-gray-900">Record Labels</h1>
+          <p className="text-body text-gray-600 ml-7">Discover and support independent music labels</p>
         </div>
         <button 
           onClick={() => setIsCartOpen(true)}
@@ -26,7 +26,7 @@ export function Store() {
       </div>
 
       {/* Labels Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div id="labels" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {mockLabels.map(label => (
           <Link
             key={label.id}

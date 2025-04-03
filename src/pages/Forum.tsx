@@ -49,8 +49,8 @@ export function Forum() {
     <div className="space-y-8">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="heading-lg text-gray-900 mb-2">Forum</h1>
-          <p className="text-body text-gray-600">Join the conversation with our community</p>
+          <h1 className="heading-lg p-6 text-gray-900 mb-2">Forum</h1>
+          <p className="text-body text-gray-600 ml-7">Join the conversation with our community</p>
         </div>
         <button
           onClick={handlePostAction}
