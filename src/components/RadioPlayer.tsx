@@ -11,7 +11,7 @@ interface Stream {
 const streams: Stream[] = [
   {
     id: '1',
-    name: "apiento's live stream",
+    name: "Apiento's Live Stream",
     host: 'Apiento',
     url: 'https://stream.radio.co/s5958f4b52/listen'
   },

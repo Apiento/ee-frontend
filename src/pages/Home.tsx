@@ -54,9 +54,9 @@ export function Home() {
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <Store className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;discover music
+                &nbsp;Discover Music
               </h2>
-              <p className="font-display tracking-tight">browse and purchase high-quality digital products</p>
+              <p className="font-display tracking-tight">Browse and purchase high-quality digital products</p>
             </div>
           </Link>
 
@@ -64,9 +64,9 @@ export function Home() {
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <Calendar className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;discover events
+                &nbsp;Discover Events
               </h2>
-              <p className="font-display tracking-tight">discover and book tickets for upcoming events</p>
+              <p className="font-display tracking-tight">Discover and book tickets for upcoming events</p>
             </div>
           </Link>
 
@@ -74,9 +74,9 @@ export function Home() {
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;forum
+                &nbsp;Forum
               </h2>
-              <p className="font-display tracking-tight">join discussions with our community members</p>
+              <p className="font-display tracking-tight">Join discussions with our community members</p>
             </div>
           </Link>
         </div>
@@ -91,19 +91,19 @@ export function Home() {
                 alt="Apiento"
                 className="w-8 h-8 rounded-full object-cover ml-2"
               />
-              <h2 className="text-xl font-display tracking-tight ml-4">apiento's feed</h2>
+              <h2 className="text-xl font-display tracking-tight ml-4">Apiento's Feed</h2>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <Radio className="w-8 h-8 mr-1" strokeWidth={1.5} />
-                <span className="font-display tracking-tight ml-4">currently live</span>
+                <span className="font-display tracking-tight ml-4">Currently Live</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <User className="w-8 h-8" strokeWidth={1.5} />
                 <Link to="/profile" className="font-display tracking-tight ml-5">
-                  view profile
+                  View Profile
                 </Link>
               </div>
             </div>
@@ -116,7 +116,7 @@ export function Home() {
           <div className="space-y-4" id="releases">
             <div className="flex items-center space-x-2 text-sm">
               <Music className="w-8 h-8" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">latest releases</h3>
+              <h3 className="font-medium text-gray-900">Latest Releases</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {releases.map((release, index) => (
@@ -127,8 +127,8 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{release.title.toLowerCase()}</p>
-                    <p className="text-gray-600 text-xs">{release.artist.toLowerCase()}</p>
+                    <p className="text-gray-900 text-sm">{release.title}</p>
+                    <p className="text-gray-600 text-xs">{release.artist}</p>
                   </div>
                 </div>
               ))}
@@ -138,7 +138,7 @@ export function Home() {
           <div className="space-y-4" id="events">
             <div className="flex items-center space-x-2 text-sm">
               <Calendar className="w-8 h-8" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">upcoming events</h3>
+              <h3 className="font-medium text-gray-900">Upcoming Events</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {events.map((event, index) => (
@@ -149,11 +149,11 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{event.title.toLowerCase()}</p>
+                    <p className="text-gray-900 text-sm">{event.title}</p>
                     <div className="flex items-center text-gray-600 text-xs">
-                      <span>{event.location.toLowerCase()}</span>
+                      <span>{event.location}</span>
                       <span className="mx-1">•</span>
-                      <span>{event.date.toLowerCase()}</span>
+                      <span>{event.date}</span>
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export function Home() {
           <div className="space-y-4" id="threads">
             <div className="flex items-center space-x-2 text-sm">
               <MessageCircle className="w-8 h-8" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">your threads</h3>
+              <h3 className="font-medium text-gray-900">Your Threads</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {threads.map((thread, index) => (
@@ -175,9 +175,9 @@ export function Home() {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{thread.title.toLowerCase()}</p>
+                    <p className="text-gray-900 text-sm">{thread.title}</p>
                     <div className="flex items-center text-gray-600 text-xs">
-                      <span>{thread.author.toLowerCase()}</span>
+                      <span>{thread.author}</span>
                       <span className="mx-1">•</span>
                       <span>{thread.replies} replies</span>
                     </div>

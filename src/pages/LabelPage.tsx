@@ -29,7 +29,7 @@ export function LabelPage() {
     <div id="label" className="space-y-8">
       <Link
         to="/store"
-        className="inline-flex items-center text-gray-600 hover:text-gray-900"
+        className="p-6 inline-flex items-center text-gray-600 hover:text-gray-900"
       >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to Store
