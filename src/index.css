@@ -32,8 +32,8 @@
     #menu a,
     .card h2 {
       color: white;
-      font-weight: 200;
-      font-size: 30px;
+      font-weight: 300;
+      font-size: 1.5rem;
     }
 
     #forum .card h2,
@@ -64,8 +64,8 @@
       a,
       span,
       svg {
-        font-weight: 200;
-        font-size: 30px;
+        font-weight: 300;
+        font-size: 1.5rem;
         color: black;
       }
 
@@ -78,7 +78,7 @@
       #releases, #events, #threads {
         h3 {
           font-weight: 300;
-          font-size: 30px;
+          font-size: 1.5rem;
           color: black;
         }
       }
