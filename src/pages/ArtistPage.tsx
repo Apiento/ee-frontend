@@ -23,7 +23,7 @@ export function ArtistPage() {
   }
 
   return (
-    <div className="space-y-8">
+    <div id="artist" className="space-y-8">
       <Link
         to={`/store/label/${labelId}`}
         className="inline-flex items-center text-gray-400 hover:text-white"

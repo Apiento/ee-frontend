@@ -8,6 +8,10 @@
       font-family: "fira-code", sans-serif;
     }
 
+    svg {
+      color: black;
+    }
+
     #nav {
       background-color: rgb(77, 77, 77);
       border-bottom: 1px solid rgb(155, 142, 142);
@@ -16,7 +20,6 @@
 
     #home .text-lg,
     #menu a,
-    .card svg,
     .card h2 {
       color: white;
       font-weight: 200;
@@ -24,12 +27,14 @@
     }
 
     #forum .card h2,
-    #labels .card h2 {
+    #labels .card h2,
+    #label .card h2 {
       color: black;
       font-weight: 600;
     }
 
     #labels .card p,
+    #label .card p,
     #labels .card svg,
     #forum .card svg {
       color: black;
@@ -93,14 +98,13 @@
       }
     }
 
-    .card#music {
-      background-color: black;
-    }
-    .card#events {
-      background-color: black;
-    }
+    .card#music,
+    .card#events,
     .card#forum {
       background-color: black;
+      svg {
+        color: white;
+      }
     }
   }
 }

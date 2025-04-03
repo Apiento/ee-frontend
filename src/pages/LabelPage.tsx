@@ -26,7 +26,7 @@ export function LabelPage() {
   }
 
   return (
-    <div className="space-y-8">
+    <div id="label" className="space-y-8">
       <Link
         to="/store"
         className="inline-flex items-center text-gray-600 hover:text-gray-900"
