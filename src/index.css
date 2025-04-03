@@ -20,6 +20,12 @@
       svg {
         color: white;
       }
+
+      #search {
+        svg {
+          color: lightgrey;
+        }
+      }
     }
 
     #home .text-lg,
