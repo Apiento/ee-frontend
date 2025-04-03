@@ -63,7 +63,7 @@ export function Forum() {
 
       <EventsCarousel />
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div id="forum" className="flex flex-col md:flex-row gap-6">
         {/* Filters Sidebar */}
         <div className="md:w-64 shrink-0 space-y-6">
           <div className="relative">

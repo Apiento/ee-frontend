@@ -5,7 +5,7 @@
 @layer base {
   html {
     .font-display {
-      font-family: "trade-gothic-next", sans-serif;
+      font-family: "fira-code", sans-serif;
       font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     }
 
@@ -22,6 +22,11 @@
       color: white;
       font-weight: 200;
       font-size: 30px;
+    }
+
+    #forum .card h2 {
+      color: black;
+      font-weight: 600;
     }
 
     #menu {
@@ -82,13 +87,13 @@
     }
 
     .card#music {
-      background-color: #007786;
+      background-color: black;
     }
     .card#events {
-      background-color: #FFC145;
+      background-color: black;
     }
     .card#forum {
-      background-color: #FF6B6C;
+      background-color: black;
     }
   }
 }

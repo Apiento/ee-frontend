@@ -81,26 +81,26 @@ export function Home() {
       </div>
 
       <section>
-        <div id="banner" className="p-2 border-b border-gray-200">
+        <div id="banner" className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between grid md:grid-cols-3">
             <div className="flex items-center space-x-3 col-span-1 px-4">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-6 h-6 rounded-full object-cover"
+                className="w-10 h-10 rounded-full object-cover"
               />
-              <h2 className="text-xl font-display tracking-tight mb-2">apiento's feed</h2>
+              <h2 className="text-xl font-display tracking-tight">apiento's feed</h2>
             </div>
             <div className="col-span-1">
               <div className="flex items-center text-sm">
                 <Radio className="w-8 h-8 mr-1" strokeWidth={1.5} />
-                <span className="font-display tracking-tight mb-2">currently live</span>
+                <span className="font-display tracking-tight">currently live</span>
               </div>
             </div>
             <div className="col-span-1">
               <div className="flex items-center text-sm">
                 <User className="w-8 h-8" strokeWidth={1.5} />&nbsp;
-                <Link to="/profile" className="font-display tracking-tight mb-2">
+                <Link to="/profile" className="font-display tracking-tight">
                   view profile
                 </Link>
               </div>
