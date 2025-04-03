@@ -5,7 +5,7 @@
 @layer base {
   html {
     #root * {
-      font-family: "fira-code", sans-serif;
+      font-family: "akzidenz-grotesk-next-pro", "Akzidenz-Grotesk-Next", sans-serif;
     }
 
     svg {
