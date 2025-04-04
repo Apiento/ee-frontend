@@ -49,8 +49,8 @@ export function Home() {
   return (
     <div>
       <section id="cards">
-        <div className="grid md:grid-cols-3 gap-6 px-6">
-          <Link to="/store" className="card card-hover border-b border-black" id="music">
+        <div className="grid md:grid-cols-3 md:gap-6 px-6">
+          <Link to="/store" className="card card-hover" id="music">
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <Store className="w-7 h-7" strokeWidth={0.9} />
@@ -60,7 +60,7 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/events" className="card card-hover border border-b-black" id="events">
+          <Link to="/events" className="card card-hover" id="events">
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <Calendar className="w-7 h-7" strokeWidth={0.9} />
@@ -70,7 +70,7 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/forum" className="card card-hover border border-b-black" id="forum">
+          <Link to="/forum" className="card card-hover mb-6 md:mb-0" id="forum">
             <div className="py-4 col-span-1">
               <h2 className="font-display tracking-tight">
                 <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
