@@ -89,7 +89,7 @@ export function Home() {
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-8 h-8 rounded-full object-cover ml-2"
+                className="w-8 h-8 rounded-full object-cover ml-2 mr-2"
               />
               <h2 className="text-xl font-display tracking-tight ml-4">Apiento's Feed</h2>
             </div>
