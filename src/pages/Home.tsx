@@ -115,7 +115,7 @@ export function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
           <div className="space-y-4" id="releases">
             <div className="flex items-center space-x-2 text-sm">
-              <Music className="w-8 h-8" strokeWidth={0.5} />
+              <Music className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">Latest Releases</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
@@ -137,7 +137,7 @@ export function Home() {
 
           <div className="space-y-4" id="events">
             <div className="flex items-center space-x-2 text-sm">
-              <Calendar className="w-8 h-8" strokeWidth={0.5} />
+              <Calendar className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">Upcoming Events</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
@@ -163,7 +163,7 @@ export function Home() {
 
           <div className="space-y-4" id="threads">
             <div className="flex items-center space-x-2 text-sm">
-              <MessageCircle className="w-8 h-8" strokeWidth={0.5} />
+              <MessageCircle className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">Your Threads</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
