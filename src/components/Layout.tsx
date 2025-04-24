@@ -3,7 +3,7 @@ import {Link, Outlet, useNavigate} from 'react-router-dom';
 import { MessageSquare, Store, Calendar, User, Search, Users } from 'lucide-react';
 import {RadioPlayer} from './RadioPlayer';
 import {MusicPlayer} from './MusicPlayer';
-import logo from './../public/img/Everything_Everywhere_Logo_White.png';
+import logo from './../public/img/Everything_Everywhere_Logo_Black.jpg';
 
 export function Layout() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -93,7 +93,7 @@ export function Layout() {
         <div className="max-w-[1920px] mx-auto px-6 py-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">About</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">ABOUT</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 The culture we believe in builds foundations.
               </p>
@@ -102,7 +102,7 @@ export function Layout() {
               </Link>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">Quick Links</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">QUICK LINKS</h3>
               <ul className="space-y-3">
                 <li>
                   <Link to="/forum" className="text-gray-600 hover:text-gray-900 text-sm">Forum</Link>
@@ -119,7 +119,7 @@ export function Layout() {
               </ul>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">Connect</h3>
+              <h3 className="font-display text-lg font-semibold text-gray-900 mb-6">CONNECT</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Join our community and stay updated with the latest releases, events, and discussions.
               </p>

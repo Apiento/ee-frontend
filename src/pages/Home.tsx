@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Calendar, MessageCircle, MessageSquare, Music, Radio, Store, User} from 'lucide-react';
-import banner from "../public/img/Banner_with_text.jpg";
 
 export function Home() {
   const [showAllReleases, setShowAllReleases] = useState(false);
@@ -50,11 +49,10 @@ export function Home() {
   return (
     <div>
       <section id="cards">
-        <img className="flex-1 max-w-[1920px] mx-auto w-full" src={banner} alt="banner" />
         <div className="grid md:grid-cols-3 md:gap-6 px-6">
-          <Link to="/store" className="card card-hover" id="music">
+          <Link to="/store" className="card card-hover bg-gray-50" id="music">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight">
+              <h2 className="font-extrabold tracking-tight text-3xl">
                 <Store className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;DISCOVER MUSIC
               </h2>
@@ -62,9 +60,9 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/events" className="card card-hover" id="events">
+          <Link to="/events" className="card card-hover bg-gray-50" id="events">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight">
+              <h2 className="font-extrabold tracking-tight text-3xl">
                 <Calendar className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;DISCOVER EVENTS
               </h2>
@@ -72,9 +70,9 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/forum" className="card card-hover mb-6 md:mb-0" id="forum">
+          <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight">
+              <h2 className="font-extrabold tracking-tight text-3xl">
                 <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
                 &nbsp;FORUM
               </h2>
@@ -93,19 +91,19 @@ export function Home() {
                 alt="Apiento"
                 className="w-8 h-8 rounded-full object-cover ml-2 mr-2"
               />
-              <h2 className="text-xl font-display tracking-tight ml-4">Apiento's Feed</h2>
+              <h2 className="text-xl font-display tracking-tight ml-4">APIENTO'S FEED</h2>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <Radio className="w-8 h-8 mr-1" strokeWidth={1.5} />
-                <span className="font-display tracking-tight ml-4">Currently Live</span>
+                <Radio className="w-8 h-8 mr-1" strokeWidth={0.8} />
+                <span className="font-display tracking-tight ml-4">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <User className="w-8 h-8" strokeWidth={1.5} />
+                <User className="w-8 h-8" strokeWidth={0.8} />
                 <Link to="/profile" className="font-display tracking-tight ml-5">
-                  View Profile
+                  VIEW PROFILE
                 </Link>
               </div>
             </div>

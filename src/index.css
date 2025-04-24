@@ -5,7 +5,7 @@
 @layer base {
   html {
     #root * {
-      font-family: "UniformaBlack", sans-serif;
+      font-family: "Uniforma", sans-serif;
     }
 
     svg {
@@ -13,12 +13,11 @@
     }
 
     #nav {
-      background-color: rgb(77, 77, 77);
       border-bottom: 1px solid rgb(155, 142, 142);
       height: 4.6rem;
 
       svg {
-        color: white;
+        color: black;
       }
 
       #search {
@@ -29,9 +28,8 @@
     }
 
     #home .text-lg,
-    #menu a,
-    .card h2 {
-      color: white;
+    #menu a {
+      color: black;
       font-size: 1.8rem;
     }
 
@@ -39,7 +37,7 @@
     #labels .card h2,
     #label .card h2 {
       color: black;
-      font-weight: 600;
+      font-size: 1.8rem;
     }
 
     #labels .card p,
@@ -62,8 +60,6 @@
     }
 
     #banner {
-      background-color: #BAB496;
-
       h2,
       a,
       span,
@@ -86,10 +82,6 @@
       }
     }
 
-    #cards:first-child {
-      background-color: black;
-    }
-
     .card {
       border-bottom: 1px solid gray;
       border-top: none;
@@ -101,7 +93,6 @@
       }
 
       p {
-        color: white;
         font-weight: 200;
         font-size: 1.1rem;
       }
@@ -110,10 +101,7 @@
     .card#music,
     .card#events,
     .card#forum {
-      background-color: black;
-      svg {
-        color: white;
-      }
+      color: black;
     }
   }
 }

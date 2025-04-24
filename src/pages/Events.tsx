@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Calendar, MapPin, Clock, Users, Heart, Ticket, Search } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { useEvents, type Event } from '../hooks/useEvents';
-import banner from "../public/img/EE_V1_Page_12_Image_0001.jpg";
 
 // Mock data - would come from Supabase in production
 const mockEvents: Event[] = [
@@ -173,183 +172,180 @@ export function Events() {
   };
 
   return (
-    <div>
-      <img className="flex-1 max-w-[1920px] mx-auto w-full" src={banner} alt="banner" />
-      <div className="space-y-6 m-6">
-        <div className="flex flex-col space-y-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <h1 className="heading-lg text-gray-900">EVENTS</h1>
-            </div>
-            <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
-              <button
-                onClick={() => setPriceFilter('all')}
-                className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                  priceFilter === 'all'
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                All
-              </button>
-              <button
-                onClick={() => setPriceFilter('free')}
-                className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                  priceFilter === 'free'
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Free
-              </button>
-              <button
-                onClick={() => setPriceFilter('paid')}
-                className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                  priceFilter === 'paid'
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Paid
-              </button>
-            </div>
+    <div className="space-y-6 m-6">
+      <div className="flex flex-col space-y-4">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <h1 className="heading-lg text-gray-900">EVENTS</h1>
           </div>
-
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400" />
-            </div>
-            <input
-              type="text"
-              placeholder="Search by location..."
-              value={locationSearch}
-              onChange={(e) => setLocationSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
+          <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
+            <button
+              onClick={() => setPriceFilter('all')}
+              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                priceFilter === 'all'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setPriceFilter('free')}
+              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                priceFilter === 'free'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Free
+            </button>
+            <button
+              onClick={() => setPriceFilter('paid')}
+              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                priceFilter === 'paid'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Paid
+            </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredEvents.map(event => (
-            <div key={event.id} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video relative">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
-                <div className="absolute top-2 right-2">
-                  <button
-                    onClick={() => toggleInterested(event.id)}
-                    className={`p-1.5 rounded-full transition-colors ${
-                      isInterested(event.id)
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white/90 text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    <Heart className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="text"
+            placeholder="Search by location..."
+            value={locationSearch}
+            onChange={(e) => setLocationSearch(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+      </div>
 
-              <div className="p-4 space-y-4">
-                <div>
-                  <h2 className="text-lg font-semibold text-gray-900 mb-1">{event.title}</h2>
-                  <p className="text-sm text-gray-600">{event.description}</p>
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>{format(parseISO(event.date), 'MMMM d, yyyy')}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>{event.location}</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="flex -space-x-2">
-                      {event.attendees.avatars.map((avatar, index) => (
-                        <img
-                          key={index}
-                          src={avatar}
-                          alt="Attendee"
-                          className="w-6 h-6 rounded-full border-2 border-white"
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600">
-                      {event.attendees.count} attending
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-sm font-medium text-gray-900">
-                      {event.price === 0 ? 'Free' : `$${event.price.toFixed(2)}`}
-                    </span>
-                  </div>
-                </div>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredEvents.map(event => (
+          <div key={event.id} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+            <div className="aspect-video relative">
+              <img
+                src={event.image}
+                alt={event.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+              <div className="absolute top-2 right-2">
                 <button
-                  onClick={() => handlePurchase(event)}
-                  className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                  onClick={() => toggleInterested(event.id)}
+                  className={`p-1.5 rounded-full transition-colors ${
+                    isInterested(event.id)
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white/90 text-gray-700 hover:bg-gray-100'
+                  }`}
                 >
-                  <Ticket className="w-4 h-4" />
-                  <span>{event.price === 0 ? 'Register' : 'Buy Ticket'}</span>
+                  <Heart className="w-4 h-4" />
                 </button>
               </div>
             </div>
-          ))}
-        </div>
 
-        {showPurchaseModal && selectedEvent && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-4">
-              <h2 className="text-xl font-semibold text-gray-900">Purchase Ticket</h2>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Event</span>
-                  <span className="text-gray-900 font-medium">{selectedEvent.title}</span>
+            <div className="p-4 space-y-4">
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900 mb-1">{event.title}</h2>
+                <p className="text-sm text-gray-600">{event.description}</p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-600">
+                  <Calendar className="w-4 h-4 mr-2 text-gray-400" />
+                  <span>{format(parseISO(event.date), 'MMMM d, yyyy')}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Price</span>
-                  <span className="text-gray-900 font-medium">
-                    {selectedEvent.price === 0 ? 'Free' : `$${selectedEvent.price.toFixed(2)}`}
+                <div className="flex items-center text-sm text-gray-600">
+                  <Clock className="w-4 h-4 mr-2 text-gray-400" />
+                  <span>{event.time}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <MapPin className="w-4 h-4 mr-2 text-gray-400" />
+                  <span>{event.location}</span>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="flex -space-x-2">
+                    {event.attendees.avatars.map((avatar, index) => (
+                      <img
+                        key={index}
+                        src={avatar}
+                        alt="Attendee"
+                        className="w-6 h-6 rounded-full border-2 border-white"
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    {event.attendees.count} attending
                   </span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Remaining Tickets</span>
-                  <span className="text-gray-900 font-medium">{selectedEvent.remainingTickets}</span>
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium text-gray-900">
+                    {event.price === 0 ? 'Free' : `$${event.price.toFixed(2)}`}
+                  </span>
                 </div>
               </div>
-              <div className="flex space-x-4">
-                <button
-                  onClick={() => setShowPurchaseModal(false)}
-                  className="flex-1 py-2 text-gray-600 hover:text-gray-900"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={() => {
-                    // Handle purchase logic here
-                    setShowPurchaseModal(false);
-                  }}
-                  className="flex-1 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                >
-                  Confirm
-                </button>
-              </div>
+
+              <button
+                onClick={() => handlePurchase(event)}
+                className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+              >
+                <Ticket className="w-4 h-4" />
+                <span>{event.price === 0 ? 'Register' : 'Buy Ticket'}</span>
+              </button>
             </div>
           </div>
-        )}
+        ))}
       </div>
+
+      {showPurchaseModal && selectedEvent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-4">
+            <h2 className="text-xl font-semibold text-gray-900">Purchase Ticket</h2>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Event</span>
+                <span className="text-gray-900 font-medium">{selectedEvent.title}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Price</span>
+                <span className="text-gray-900 font-medium">
+                  {selectedEvent.price === 0 ? 'Free' : `$${selectedEvent.price.toFixed(2)}`}
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Remaining Tickets</span>
+                <span className="text-gray-900 font-medium">{selectedEvent.remainingTickets}</span>
+              </div>
+            </div>
+            <div className="flex space-x-4">
+              <button
+                onClick={() => setShowPurchaseModal(false)}
+                className="flex-1 py-2 text-gray-600 hover:text-gray-900"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  // Handle purchase logic here
+                  setShowPurchaseModal(false);
+                }}
+                className="flex-1 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
