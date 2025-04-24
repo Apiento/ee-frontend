@@ -3,6 +3,7 @@ import {Link, Outlet, useNavigate} from 'react-router-dom';
 import { MessageSquare, Store, Calendar, User, Search, Users } from 'lucide-react';
 import {RadioPlayer} from './RadioPlayer';
 import {MusicPlayer} from './MusicPlayer';
+import logo from './../public/img/Everything_Everywhere_Logo_White.png';
 
 export function Layout() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,7 +25,7 @@ export function Layout() {
           <div className="flex items-center justify-between h-18">
             <div id="home" className="flex items-center">
               <Link to="/" className="font-display tracking-tight">
-                <div className="text-lg leading-none">Everything Everywhere</div>
+                <img src={logo} alt="logo" height={250} width={250} />
               </Link>
             </div>
             
@@ -46,23 +47,23 @@ export function Layout() {
             </div>
             
             <div id="menu" className="hidden md:flex items-center space-x-8">
-              <Link to="/forum" className="font-display tracking-tight flex items-center">
+              <Link to="/forum" className="font-extrabold tracking-tight flex items-center">
                 <MessageSquare className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                Forum
+                FORUM
               </Link>
-              <Link to="/store" className="font-display tracking-tight flex items-center">
+              <Link to="/store" className="font-extrabold tracking-tight flex items-center">
                 <Store className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                Store
+                STORE
               </Link>
-              <Link to="/events" className="font-display tracking-tight flex items-center">
+              <Link to="/events" className="font-extrabold tracking-tight flex items-center">
                 <Calendar className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                Events
+                EVENTS
               </Link>
-              <Link to="/community" className="font-display tracking-tight flex items-center">
+              <Link to="/community" className="font-extrabold tracking-tight flex items-center">
                 <Users className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                Community
+                COMMUNITY
               </Link>
-              <Link to="/profile" className="font-display tracking-tight">
+              <Link to="/profile" className="font-extrabold tracking-tight">
                 <User className="w-8 h-8" strokeWidth={0.5} />
               </Link>
             </div>

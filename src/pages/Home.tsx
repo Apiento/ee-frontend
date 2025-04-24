@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Calendar, MessageCircle, MessageSquare, Music, Radio, Store, User} from 'lucide-react';
+import banner from "../public/img/Banner_with_text.jpg";
 
 export function Home() {
   const [showAllReleases, setShowAllReleases] = useState(false);
@@ -49,12 +50,13 @@ export function Home() {
   return (
     <div>
       <section id="cards">
+        <img className="flex-1 max-w-[1920px] mx-auto w-full" src={banner} alt="banner" />
         <div className="grid md:grid-cols-3 md:gap-6 px-6">
           <Link to="/store" className="card card-hover" id="music">
             <div className="py-4 col-span-1">
-              <h2 className="font-display tracking-tight">
+              <h2 className="font-extrabold tracking-tight">
                 <Store className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;Discover Music
+                &nbsp;DISCOVER MUSIC
               </h2>
               <p className="font-display tracking-tight">Browse and purchase high-quality digital products</p>
             </div>
@@ -62,9 +64,9 @@ export function Home() {
 
           <Link to="/events" className="card card-hover" id="events">
             <div className="py-4 col-span-1">
-              <h2 className="font-display tracking-tight">
+              <h2 className="font-extrabold tracking-tight">
                 <Calendar className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;Discover Events
+                &nbsp;DISCOVER EVENTS
               </h2>
               <p className="font-display tracking-tight">Discover and book tickets for upcoming events</p>
             </div>
@@ -72,9 +74,9 @@ export function Home() {
 
           <Link to="/forum" className="card card-hover mb-6 md:mb-0" id="forum">
             <div className="py-4 col-span-1">
-              <h2 className="font-display tracking-tight">
+              <h2 className="font-extrabold tracking-tight">
                 <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
-                &nbsp;Forum
+                &nbsp;FORUM
               </h2>
               <p className="font-display tracking-tight">Join discussions with our community members</p>
             </div>
@@ -113,10 +115,10 @@ export function Home() {
 
       <section id="feeds">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-          <div className="space-y-4" id="releases">
+          <div className="space-y-10" id="releases">
             <div className="flex items-center space-x-2 text-sm">
               <Music className="w-8 h-8 mr-2" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">Latest Releases</h3>
+              <h3 className="font-medium text-gray-900">LATEST RELEASES</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {releases.map((release, index) => (
@@ -127,18 +129,18 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{release.title}</p>
-                    <p className="text-gray-600 text-xs">{release.artist}</p>
+                    <p className="text-gray-900 text-lg">{release.title}</p>
+                    <p className="text-gray-600 text-sm">{release.artist}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="space-y-4" id="events">
+          <div className="space-y-10" id="events">
             <div className="flex items-center space-x-2 text-sm">
               <Calendar className="w-8 h-8 mr-2" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">Upcoming Events</h3>
+              <h3 className="font-medium text-gray-900">UPCOMING EVENTS</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {events.map((event, index) => (
@@ -149,8 +151,8 @@ export function Home() {
                     className="w-10 h-10 rounded object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{event.title}</p>
-                    <div className="flex items-center text-gray-600 text-xs">
+                    <p className="text-gray-900 text-lg">{event.title}</p>
+                    <div className="flex items-center text-gray-600 text-sm">
                       <span>{event.location}</span>
                       <span className="mx-1">•</span>
                       <span>{event.date}</span>
@@ -161,10 +163,10 @@ export function Home() {
             </div>
           </div>
 
-          <div className="space-y-4" id="threads">
+          <div className="space-y-10" id="threads">
             <div className="flex items-center space-x-2 text-sm">
               <MessageCircle className="w-8 h-8 mr-2" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">Your Threads</h3>
+              <h3 className="font-medium text-gray-900">YOUR THREADS</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {threads.map((thread, index) => (
@@ -175,8 +177,8 @@ export function Home() {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-gray-900 text-sm">{thread.title}</p>
-                    <div className="flex items-center text-gray-600 text-xs">
+                    <p className="text-gray-900 text-lg">{thread.title}</p>
+                    <div className="flex items-center text-gray-600 text-sm">
                       <span>{thread.author}</span>
                       <span className="mx-1">•</span>
                       <span>{thread.replies} replies</span>

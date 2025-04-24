@@ -90,7 +90,7 @@ export function RadioPlayer() {
                 onClick={() => setShowDropdown(!showDropdown)}
                 className="flex items-center text-left text-sm hover:text-blue-400 transition-colors"
               >
-                <p className="text-white font-medium">{selectedStream.name}</p>
+                <p className="text-white font-medium text-lg">{selectedStream.name}</p>
                 <ChevronDown className="w-4 h-4 text-gray-400 ml-2" />
               </button>
 

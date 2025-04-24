@@ -5,7 +5,7 @@
 @layer base {
   html {
     #root * {
-      font-family: "akzidenz-grotesk-next-pro", "Akzidenz-Grotesk-Next", sans-serif;
+      font-family: "UniformaBlack", sans-serif;
     }
 
     svg {
@@ -32,8 +32,7 @@
     #menu a,
     .card h2 {
       color: white;
-      font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     #forum .card h2,
@@ -64,7 +63,6 @@
       a,
       span,
       svg {
-        font-weight: 300;
         font-size: 1.5rem;
         color: black;
       }
@@ -77,7 +75,6 @@
     #feeds {
       #releases, #events, #threads {
         h3 {
-          font-weight: 300;
           font-size: 1.5rem;
           color: black;
         }
