@@ -50,6 +50,11 @@
       font-weight: 200;
     }
 
+    #new-post,
+    #cart {
+      color: white;
+    }
+
     #menu {
       a:hover {
         text-decoration: underline;

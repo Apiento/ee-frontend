@@ -49,7 +49,7 @@ export function Forum() {
   return (
     <div>
       <img className="flex-1 max-w-[1920px] mx-auto w-full" src={banner} alt="banner" />
-      <div className="space-y-8">
+      <div className="space-y-8" id="forum-page">
         <div className="flex justify-between items-center">
           <div>
             <h1 className="heading-lg p-6 text-gray-900 mb-2">FORUM</h1>
@@ -57,9 +57,9 @@ export function Forum() {
           </div>
           <button
             onClick={handlePostAction}
-            className="button-primary flex items-center space-x-2"
+            className="button-primary flex items-center space-x-2 mr-6"
           >
-            <MessageSquare className="w-4 h-4" />
+            <MessageSquare className="w-4 h-4" id="new-post"/>
             <span>New Post</span>
           </button>
         </div>

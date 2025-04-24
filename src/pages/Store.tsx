@@ -21,9 +21,9 @@ export function Store() {
             </div>
             <button
               onClick={() => setIsCartOpen(true)}
-              className="button-primary flex items-center"
+              className="button-primary flex items-center mr-6"
             >
-              <ShoppingCart className="w-4 h-4 mr-2" />
+              <ShoppingCart className="w-4 h-4 mr-2" id="cart"/>
               Cart ({items.length})
             </button>
           </div>
