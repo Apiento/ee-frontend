@@ -11,7 +11,7 @@ interface Stream {
 const streams: Stream[] = [
   {
     id: '1',
-    name: "Apiento's Live Stream",
+    name: "APIENTO'S LIVE STREAM",
     host: 'Apiento',
     url: 'https://stream.radio.co/s5958f4b52/listen'
   },
@@ -76,12 +76,12 @@ export function RadioPlayer() {
           <div className="flex items-center space-x-4">
             <button
               onClick={togglePlay}
-              className="p-1.5 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="p-1.5 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors"
             >
               {isPlaying ? (
-                <Pause className="w-4 h-4 text-white" />
+                <Pause className="ml-2 w-4 h-4 text-black" />
               ) : (
-                <Play className="w-4 h-4 text-white" />
+                <Play className="pl-1 w-6 h-6 text-black" />
               )}
             </button>
 
