@@ -9,9 +9,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'KUniformaTrial-70Semibold';
+  src: url('./public/font/KUniformaTrial-70Semibold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   html {
     #root * {
+      font-family: "KUniformaTrial-70Semibold", sans-serif;
+    }
+
+    #root h1,
+    #root h2,
+    #root h3,
+    #root span {
       font-family: "KUniformaTrial-90Black", sans-serif;
     }
 
@@ -25,6 +39,10 @@
 
       svg {
         color: black;
+      }
+
+      a {
+        font-family: "KUniformaTrial-90Black", sans-serif;
       }
 
       #search {
@@ -73,6 +91,7 @@
       svg {
         font-size: 1.5rem;
         color: black;
+        font-family: "KUniformaTrial-90Black", sans-serif;
       }
 
       a:hover {
