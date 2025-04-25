@@ -25,7 +25,9 @@ export function Layout() {
           <div className="flex items-center justify-between h-18">
             <div id="home" className="flex items-center">
               <Link to="/" className="font-display tracking-tight">
-                <img src={logo} alt="logo" height={250} width={250} />
+                <h1 className="text-4xl font-display leading-5 tracking-tight mt-2.5">EVERYTHING</h1>
+                <h1 className="text-4xl font-display tracking-tight">EVERYWHERE</h1>
+                {/*<img src={logo} alt="logo" height={250} width={250} />*/}
               </Link>
             </div>
             

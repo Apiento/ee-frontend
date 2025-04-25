@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'KUniformaTrial-90Black';
+  src: url('./public/font/KUniformaTrial-90Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   html {
     #root * {
-      font-family: "Uniforma", sans-serif;
+      font-family: "KUniformaTrial-90Black", sans-serif;
     }
 
     svg {
