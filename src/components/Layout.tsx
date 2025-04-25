@@ -3,7 +3,6 @@ import {Link, Outlet, useNavigate} from 'react-router-dom';
 import { MessageSquare, Store, Calendar, User, Search, Users } from 'lucide-react';
 import {RadioPlayer} from './RadioPlayer';
 import {MusicPlayer} from './MusicPlayer';
-import logo from './../public/img/Everything_Everywhere_Logo_Black.jpg';
 
 export function Layout() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -27,7 +26,6 @@ export function Layout() {
               <Link to="/" className="font-display tracking-tight">
                 <h1 className="text-4xl font-display leading-5 tracking-tight mt-2.5">EVERYTHING</h1>
                 <h1 className="text-4xl font-display tracking-tight">EVERYWHERE</h1>
-                {/*<img src={logo} alt="logo" height={250} width={250} />*/}
               </Link>
             </div>
             
