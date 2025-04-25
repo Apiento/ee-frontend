@@ -53,7 +53,7 @@ export function Home() {
           <Link to="/store" className="card card-hover bg-gray-50" id="music">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl">
-                <Store className="w-7 h-7" strokeWidth={0.9} />
+                <Store className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER MUSIC
               </h2>
               <p className="font-display tracking-tight">Browse and purchase high-quality digital products</p>
@@ -63,7 +63,7 @@ export function Home() {
           <Link to="/events" className="card card-hover bg-gray-50" id="events">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl">
-                <Calendar className="w-7 h-7" strokeWidth={0.9} />
+                <Calendar className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER EVENTS
               </h2>
               <p className="font-display tracking-tight">Discover and book tickets for upcoming events</p>
@@ -73,7 +73,7 @@ export function Home() {
           <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl">
-                <MessageSquare className="w-7 h-7" strokeWidth={0.9} />
+                <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;FORUM
               </h2>
               <p className="font-display tracking-tight">Join discussions with our community members</p>
@@ -89,19 +89,19 @@ export function Home() {
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80"
                 alt="Apiento"
-                className="w-8 h-8 rounded-full object-cover ml-2 mr-2"
+                className="w-8 h-8 rounded-full object-cover ml-2 mr-1"
               />
               <h2 className="text-xl font-display tracking-tight ml-4">APIENTO'S FEED</h2>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <Radio className="w-8 h-8 mr-1" strokeWidth={0.8} />
+                <Radio className="w-8 h-8 ml-1" strokeWidth={0.8} />
                 <span className="font-display tracking-tight ml-4">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <User className="w-8 h-8" strokeWidth={0.8} />
+                <User className="w-8 h-8 ml-0.5" strokeWidth={0.8} />
                 <Link to="/profile" className="font-display tracking-tight ml-5">
                   VIEW PROFILE
                 </Link>
