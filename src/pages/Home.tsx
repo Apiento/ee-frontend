@@ -52,7 +52,7 @@ export function Home() {
         <div className="grid md:grid-cols-3 md:gap-6 px-6">
           <Link to="/store" className="card card-hover bg-gray-50" id="music">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl text-3xl max-sm:text-2xl">
+              <h2 className="font-extrabold tracking-tight text-3xl text-3xl max-sm:text-xl">
                 <Store className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER MUSIC
               </h2>
@@ -62,7 +62,7 @@ export function Home() {
 
           <Link to="/events" className="card card-hover bg-gray-50" id="events">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-2xl">
+              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
                 <Calendar className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER EVENTS
               </h2>
@@ -72,7 +72,7 @@ export function Home() {
 
           <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-2xl">
+              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
                 <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;FORUM
               </h2>
@@ -91,18 +91,19 @@ export function Home() {
                 alt="Apiento"
                 className="w-8 h-8 rounded-full object-cover ml-2 mr-1"
               />
-              <h2 className="text-xl font-display tracking-tight ml-4">APIENTO'S FEED</h2>
+              <h2 className="text-2xl tracking-tight ml-4 max-sm:text-xl">APIENTO'S FEED</h2>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <Radio className="w-8 h-8 ml-1" strokeWidth={0.8} />
-                <span className="font-display tracking-tight ml-4">CURRENTLY LIVE</span>
+                <span className="text-2xl tracking-tight ml-4 max-sm:text-xl">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <User className="w-8 h-8 ml-0.5" strokeWidth={0.8} />
-                <Link to="/profile" className="font-display tracking-tight ml-5">
+                <Link to="/profile"
+                      className="text-2xl tracking-tight ml-5 max-sm:text-xl">
                   VIEW PROFILE
                 </Link>
               </div>
