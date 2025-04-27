@@ -26,7 +26,7 @@ export function Store() {
       </div>
 
       {/* Labels Grid */}
-      <div id="labels" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ml-6">
+      <div id="labels" className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 m-6">
         {mockLabels.map(label => (
           <Link
             key={label.id}

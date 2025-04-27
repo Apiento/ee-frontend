@@ -52,7 +52,7 @@ export function Home() {
         <div className="grid md:grid-cols-3 md:gap-6 px-6">
           <Link to="/store" className="card card-hover bg-gray-50" id="music">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl">
+              <h2 className="font-extrabold tracking-tight text-3xl text-3xl max-sm:text-2xl">
                 <Store className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER MUSIC
               </h2>
@@ -62,7 +62,7 @@ export function Home() {
 
           <Link to="/events" className="card card-hover bg-gray-50" id="events">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl">
+              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-2xl">
                 <Calendar className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER EVENTS
               </h2>
@@ -72,7 +72,7 @@ export function Home() {
 
           <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
             <div className="py-4 col-span-1">
-              <h2 className="font-extrabold tracking-tight text-3xl">
+              <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-2xl">
                 <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
                 &nbsp;FORUM
               </h2>
