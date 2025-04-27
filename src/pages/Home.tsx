@@ -96,14 +96,14 @@ export function Home() {
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <Radio className="w-8 h-8 ml-1" strokeWidth={0.8} />
-                <span className="text-2xl tracking-tight ml-4 max-sm:text-xl">CURRENTLY LIVE</span>
+                <span className="text-2xl tracking-tight ml-4 max-sm:text-xl max-sm:ml-3">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
                 <User className="w-8 h-8 ml-0.5" strokeWidth={0.8} />
                 <Link to="/profile"
-                      className="text-2xl tracking-tight ml-5 max-sm:text-xl">
+                      className="text-2xl tracking-tight ml-5 max-sm:text-xl max-sm:ml-3">
                   VIEW PROFILE
                 </Link>
               </div>
