@@ -46,7 +46,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           {error && (
-            <div className="p-3 bg-red-900/50 border border-red-800 rounded-sm text-red-200 text-sm">
+            <div className="p-3 bg-red-900/50 border border-red-800 rounded text-red-200 text-sm">
               {error}
             </div>
           )}

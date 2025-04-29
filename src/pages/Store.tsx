@@ -13,7 +13,7 @@ export function Store() {
     <div className="space-y-12">
       <div className="flex justify-between items-center ml-6 mt-6">
         <div>
-          <h1 className="text-6xl tracking-tight max-sm:text-4xl text-gray-900">RECORD LABELS</h1>
+          <h1 className="heading-lg text-gray-900">RECORD LABELS</h1>
           <p className="text-body text-gray-600 ml-1">Discover and support independent music labels</p>
         </div>
         <button
@@ -40,8 +40,8 @@ export function Store() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="p-6">
-              <h2 className="text-xl tracking-tight text-gray-900 mb-2">{label.name}</h2>
+            <div className="pt-6 pr-6 pb-6">
+              <h2 className="text-lg font-display font-semibold text-gray-900 mb-2">{label.name}</h2>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">{label.description}</p>
               <div className="flex items-center text-sm text-gray-500 space-x-4">
                 <span className="flex items-center">
