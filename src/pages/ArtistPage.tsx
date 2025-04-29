@@ -39,7 +39,7 @@ export function ArtistPage() {
             alt={artist.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-gray-900 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <h1 className="text-4xl font-bold text-white mb-4">{artist.name}</h1>
             <p className="text-xl text-gray-300">{artist.bio}</p>
@@ -111,7 +111,7 @@ export function ArtistPage() {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => playTrack(track, release)}
-                            className="p-1 hover:bg-gray-700 rounded"
+                            className="p-1 hover:bg-gray-700 rounded-sm"
                           >
                             {currentTrack?.id === track.id && isPlaying ? (
                               <Pause className="w-4 h-4 text-blue-400" />

@@ -49,7 +49,7 @@ export function Forum() {
     <div className="space-y-8" id="forum-page">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="heading-lg p-6 text-gray-900 mb-2">FORUM</h1>
+          <h1 className="text-6xl tracking-tight max-sm:text-4xl p-6 text-gray-900 mb-2">FORUM</h1>
           <p className="text-body text-gray-600 ml-7">Join the conversation with our community</p>
         </div>
         <button
@@ -78,7 +78,7 @@ export function Forum() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium text-gray-900 mb-3">Categories</h2>
+            <h2 className="text-xl tracking-tight text-gray-900 mb-3">Categories</h2>
             <button
               onClick={() => setSelectedCategory('all')}
               className={`w-full px-4 py-2 rounded-lg text-sm font-medium transition-colors text-left ${
@@ -120,7 +120,7 @@ export function Forum() {
                   className="card card-hover block"
                 >
                   <div className="p-6">
-                    <h2 className="text-xl font-display font-semibold text-gray-900 mb-4">{post.title}</h2>
+                    <h2 className="text-3xl max-sm:text-xl tracking-tight text-gray-900 mb-4">{post.title}</h2>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4 text-sm text-gray-500">

@@ -82,7 +82,7 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
       </div>
       <EditorContent 
         editor={editor} 
-        className="prose prose-gray max-w-none p-4 bg-white min-h-[200px] focus:outline-none"
+        className="prose prose-gray max-w-none p-4 bg-white min-h-[200px] focus:outline-hidden"
       />
     </div>
   );

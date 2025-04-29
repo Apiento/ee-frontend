@@ -35,7 +35,7 @@ export function Cart({ isOpen, onClose }: CartProps) {
                 <img
                   src={item.coverArt}
                   alt={item.title}
-                  className="w-20 h-20 object-cover rounded"
+                  className="w-20 h-20 object-cover rounded-sm"
                 />
                 <div className="flex-1">
                   <h3 className="text-gray-900 font-medium">{item.title}</h3>
@@ -44,14 +44,14 @@ export function Cart({ isOpen, onClose }: CartProps) {
                     <div className="flex items-center space-x-2">
                       <button
                         onClick={() => updateQuantity(item.id, Math.max(0, (item.quantity || 1) - 1))}
-                        className="text-gray-500 hover:text-gray-900 px-2 py-1 bg-gray-100 rounded"
+                        className="text-gray-500 hover:text-gray-900 px-2 py-1 bg-gray-100 rounded-sm"
                       >
                         -
                       </button>
                       <span className="text-gray-900">{item.quantity || 1}</span>
                       <button
                         onClick={() => updateQuantity(item.id, (item.quantity || 1) + 1)}
-                        className="text-gray-500 hover:text-gray-900 px-2 py-1 bg-gray-100 rounded"
+                        className="text-gray-500 hover:text-gray-900 px-2 py-1 bg-gray-100 rounded-sm"
                       >
                         +
                       </button>

@@ -201,7 +201,7 @@ export function Profile() {
                   <img
                     src={activity.image}
                     alt={activity.title}
-                    className="w-12 h-12 rounded object-cover"
+                    className="w-12 h-12 rounded-sm object-cover"
                   />
                   <div className="flex-1">
                     <div className="flex items-center space-x-2">
@@ -240,7 +240,7 @@ export function Profile() {
                     alt={event.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/20 to-transparent" />
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-medium text-white mb-2">{event.title}</h3>
@@ -270,7 +270,7 @@ export function Profile() {
                     alt={release.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/20 to-transparent" />
                   <div className="absolute top-2 right-2">
                     <Heart className="w-4 h-4 text-red-500 fill-current" />
                   </div>
