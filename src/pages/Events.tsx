@@ -176,7 +176,7 @@ export function Events() {
       <div className="flex flex-col space-y-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <h1 className="heading-lg text-gray-900">EVENTS</h1>
+            <h1 className="text-6xl tracking-tight max-sm:text-4xl text-gray-900">EVENTS</h1>
           </div>
           <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
             <button
@@ -221,7 +221,7 @@ export function Events() {
             placeholder="Search by location..."
             value={locationSearch}
             onChange={(e) => setLocationSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -235,7 +235,7 @@ export function Events() {
                 alt={event.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/20 to-transparent" />
               <div className="absolute top-2 right-2">
                 <button
                   onClick={() => toggleInterested(event.id)}

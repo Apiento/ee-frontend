@@ -39,7 +39,7 @@ export function Community() {
   return (
     <div className="space-y-6 m-6">
       <div className="flex items-center space-x-2">
-        <h1 className="heading-lg text-gray-900">COMMUNITY</h1>
+        <h1 className="text-6xl tracking-tight text-gray-900">COMMUNITY</h1>
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
@@ -107,7 +107,7 @@ export function Community() {
                           alt={user.name}
                           className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"/>
+                      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"/>
                       <div className="absolute top-2 right-2">
                         <button
                             onClick={() => toggleFollow(user.id)}
@@ -152,7 +152,7 @@ export function Community() {
                                   <img
                                       src={event.image}
                                       alt={event.title}
-                                      className="w-8 h-8 rounded object-cover"
+                                      className="w-8 h-8 rounded-sm object-cover"
                                   />
                                   <div>
                                     <p className="text-xs text-gray-900">{event.title}</p>
@@ -174,7 +174,7 @@ export function Community() {
                                   <img
                                       src={purchase.coverArt}
                                       alt={purchase.title}
-                                      className="w-8 h-8 rounded object-cover"
+                                      className="w-8 h-8 rounded-sm object-cover"
                                   />
                                   <div>
                                     <p className="text-xs text-gray-900">{purchase.title}</p>

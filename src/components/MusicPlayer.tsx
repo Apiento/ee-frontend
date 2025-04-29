@@ -22,7 +22,7 @@ export function MusicPlayer() {
           <img
             src={currentRelease.coverArt}
             alt={currentRelease.title}
-            className="w-14 h-14 rounded object-cover"
+            className="w-14 h-14 rounded-sm object-cover"
           />
           <div>
             <h3 className="font-display text-white font-medium">{currentTrack.title}</h3>

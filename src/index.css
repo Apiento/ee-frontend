@@ -1,19 +1,142 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-  font-family: 'KUniformaTrial-90Black';
-  src: url('./public/font/KUniformaTrial-90Black.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+@theme {
+  --font-sans: Inter var, system-ui, sans-serif;
+  --font-display: Instrument Sans, Inter var, system-ui, sans-serif;
+
+  --container-8xl: 88rem;
+  --container-9xl: 96rem;
+
+  --tracking-supertight: -0.05em;
+  --tracking-superwide: 0.1em;
+
+  --text-2xs: 0.625rem;
+  --text-10xl: 10rem;
+
+  --height-112: 28rem;
+  --height-128: 32rem;
+
+  --leading-supertight: 1.1;
+
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #1a1a1a;
+  --color-gray-950: #0c0c0c;
 }
 
-@font-face {
-  font-family: 'KUniformaTrial-70Semibold';
-  src: url('./public/font/KUniformaTrial-70Semibold.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility heading-xl {
+  @apply font-display text-6xl md:text-7xl lg:text-8xl font-bold tracking-supertight leading-supertight;
+}
+
+@utility heading-lg {
+  @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-supertight leading-supertight;
+}
+
+@utility heading-md {
+  @apply font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
+}
+
+@utility heading-sm {
+  @apply font-display text-xl md:text-2xl font-bold tracking-tight;
+}
+
+@utility text-caption {
+  @apply text-xs uppercase tracking-superwide font-medium;
+}
+
+@utility text-body {
+  @apply text-base leading-relaxed;
+}
+
+@utility text-body-lg {
+  @apply text-lg leading-relaxed;
+}
+
+@utility link-hover {
+  @apply transition-colors duration-200 hover:text-gray-900;
+}
+
+@utility card {
+  @apply bg-white border border-gray-200 overflow-hidden hover:border-gray-300 transition-colors duration-200;
+  width: 100%;
+}
+
+@utility card-hover {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+@utility button-primary {
+  @apply bg-gray-900 text-white hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+}
+
+@utility button-secondary {
+  @apply bg-gray-100 text-gray-900 hover:bg-gray-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+}
+
+@utility input {
+  @apply bg-white border border-gray-200 rounded-lg px-4 py-2 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-hidden transition duration-200;
+}
+
+/* Custom scrollbar styles */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+@utility scrollbar-thumb-gray-300 {
+  &::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 6px;
+  }
+}
+@utility scrollbar-track-gray-100 {
+  &::-webkit-scrollbar-track {
+    background-color: #f3f4f6;
+    border-radius: 6px;
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: 'KUniformaTrial-90Black';
+    src: url('./public/font/KUniformaTrial-90Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'KUniformaTrial-70Semibold';
+    src: url('./public/font/KUniformaTrial-70Semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 @layer base {
@@ -108,10 +231,6 @@
     }
 
     .card {
-      border-bottom: 1px solid gray;
-      border-top: none;
-      border-left: none;
-      border-right: none;
 
       svg {
         display: inline-block;
@@ -123,10 +242,20 @@
       }
     }
 
+    .card#music:hover,
+    .card#events:hover,
+    .card#forum:hover {
+      border-bottom: 1px solid lightgray !important;
+    }
+
     .card#music,
     .card#events,
     .card#forum {
       color: black;
+      border-bottom: 1px solid gray !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
     }
   }
 }
@@ -137,79 +266,5 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-  }
-  
-  .heading-xl {
-    @apply font-display text-6xl md:text-7xl lg:text-8xl font-bold tracking-supertight leading-supertight;
-  }
-  
-  .heading-lg {
-    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-supertight leading-supertight;
-  }
-  
-  .heading-md {
-    @apply font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
-  }
-  
-  .heading-sm {
-    @apply font-display text-xl md:text-2xl font-bold tracking-tight;
-  }
-  
-  .text-caption {
-    @apply text-xs uppercase tracking-superwide font-medium;
-  }
-  
-  .text-body {
-    @apply text-base leading-relaxed;
-  }
-  
-  .text-body-lg {
-    @apply text-lg leading-relaxed;
-  }
-  
-  .link-hover {
-    @apply transition-colors duration-200 hover:text-gray-900;
-  }
-  
-  .card {
-    @apply bg-white border border-gray-200 overflow-hidden hover:border-gray-300 transition-colors duration-200;
-    width: 100%;
-  }
-  
-  .card-hover {
-    @apply hover:bg-gray-50 transition-colors duration-200;
-  }
-  
-  .button-primary {
-    @apply bg-gray-900 text-white hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
-  }
-  
-  .button-secondary {
-    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
-  }
-  
-  .input {
-    @apply bg-white border border-gray-200 rounded-lg px-4 py-2 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition duration-200;
-  }
-}
-
-/* Custom scrollbar styles */
-@layer utilities {
-  .scrollbar-thin {
-    scrollbar-width: thin;
-  }
-
-  .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
-    background-color: #D1D5DB;
-    border-radius: 6px;
-  }
-
-  .scrollbar-track-gray-100::-webkit-scrollbar-track {
-    background-color: #F3F4F6;
-    border-radius: 6px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
   }
 }

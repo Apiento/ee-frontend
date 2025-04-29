@@ -53,30 +53,30 @@ export function Home() {
           <Link to="/store" className="card card-hover bg-gray-50" id="music">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl text-3xl max-sm:text-xl">
-                <Store className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
+                <Store className="w-9 h-9 pb-2 mr-2.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER MUSIC
               </h2>
-              <p className="font-display tracking-tight">Browse and purchase high-quality digital products</p>
+              <p className="tracking-tight">Browse and purchase high-quality digital products</p>
             </div>
           </Link>
 
           <Link to="/events" className="card card-hover bg-gray-50" id="events">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
-                <Calendar className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
+                <Calendar className="w-9 h-9 pb-2 mr-2.5" strokeWidth={0.5} />
                 &nbsp;DISCOVER EVENTS
               </h2>
-              <p className="font-display tracking-tight">Discover and book tickets for upcoming events</p>
+              <p className="tracking-tight">Discover and book tickets for upcoming events</p>
             </div>
           </Link>
 
           <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
-                <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
+                <MessageSquare className="w-9 h-9 pb-2 mr-2.5" strokeWidth={0.5} />
                 &nbsp;FORUM
               </h2>
-              <p className="font-display tracking-tight">Join discussions with our community members</p>
+              <p className="tracking-tight">Join discussions with our community members</p>
             </div>
           </Link>
         </div>
@@ -91,19 +91,19 @@ export function Home() {
                 alt="Apiento"
                 className="w-8 h-8 rounded-full object-cover ml-2 mr-1"
               />
-              <h2 className="text-2xl tracking-tight ml-4 max-sm:text-xl">APIENTO'S FEED</h2>
+              <h2 className="text-2xl tracking-tight ml-4 max-sm:text-xl max-sm:ml-3.5">APIENTO'S FEED</h2>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <Radio className="w-8 h-8 ml-1" strokeWidth={0.8} />
-                <span className="text-2xl tracking-tight ml-4 max-sm:text-xl max-sm:ml-3">CURRENTLY LIVE</span>
+                <Radio className="w-8 h-8" strokeWidth={0.8} />
+                <span className="text-2xl tracking-tight ml-5.5 max-sm:text-xl max-sm:ml-4.5">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <User className="w-8 h-8 ml-0.5" strokeWidth={0.8} />
+                <User className="w-8 h-8" strokeWidth={0.8} />
                 <Link to="/profile"
-                      className="text-2xl tracking-tight ml-5 max-sm:text-xl max-sm:ml-3">
+                      className="text-2xl tracking-tight ml-6 max-sm:text-xl max-sm:ml-4">
                   VIEW PROFILE
                 </Link>
               </div>
@@ -116,7 +116,7 @@ export function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
           <div className="space-y-10" id="releases">
             <div className="flex items-center space-x-2 text-sm">
-              <Music className="w-8 h-8 mr-2" strokeWidth={0.5} />
+              <Music className="w-8 h-8 mr-5" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">LATEST RELEASES</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
@@ -125,7 +125,7 @@ export function Home() {
                   <img
                     src={release.image}
                     alt={release.title}
-                    className="w-10 h-10 rounded object-cover"
+                    className="w-10 h-10 rounded-sm object-cover"
                   />
                   <div>
                     <p className="text-gray-900 text-lg">{release.title}</p>
@@ -138,7 +138,7 @@ export function Home() {
 
           <div className="space-y-10" id="events">
             <div className="flex items-center space-x-2 text-sm">
-              <Calendar className="w-8 h-8 mr-2" strokeWidth={0.5} />
+              <Calendar className="w-8 h-8 mr-5" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">UPCOMING EVENTS</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
@@ -147,7 +147,7 @@ export function Home() {
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-10 h-10 rounded object-cover"
+                    className="w-10 h-10 rounded-sm object-cover"
                   />
                   <div>
                     <p className="text-gray-900 text-lg">{event.title}</p>
@@ -164,7 +164,7 @@ export function Home() {
 
           <div className="space-y-10" id="threads">
             <div className="flex items-center space-x-2 text-sm">
-              <MessageCircle className="w-8 h-8 mr-2" strokeWidth={0.5} />
+              <MessageCircle className="w-8 h-8 mr-5" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">YOUR THREADS</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
