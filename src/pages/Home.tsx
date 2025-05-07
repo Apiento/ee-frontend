@@ -13,16 +13,16 @@ export function Home() {
     { title: 'Warp Records', artist: '30 Years of Innovation', image: 'https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=100&q=80' },
     { title: 'New Energy', artist: 'Four Tet', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&q=80' },
     { title: 'Immunity', artist: 'Jon Hopkins', image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=100&q=80' },
-    { title: 'Promises', artist: 'Floating Points', image: 'https://images.unsplash.com/photo-1515104882246-2bbbf5680010?w=100&q=80' },
+    { title: 'Promises', artist: 'Floating Points', image: '/img/fp_promises.png' },
     { title: 'All Melody', artist: 'Nils Frahm', image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&q=80' },
     { title: 'Singularity', artist: 'Jon Hopkins', image: 'https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=100&q=80' },
     { title: 'Rival Dealer', artist: 'Burial', image: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&q=80' },
-    { title: 'Spaces', artist: 'Nils Frahm', image: 'https://images.unsplash.com/photo-1515104882246-2bbbf5680010?w=100&q=80' }
+    { title: 'Spaces', artist: 'Nils Frahm', image: '/img/nils_frahm_spaces.png' }
   ];
 
   const events = [
     { title: 'Dekmantel Festival', location: 'Amsterdam', image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=100&q=80', date: 'Mar 15' },
-    { title: 'Ben UFO All Night Long', location: 'Panorama Bar, Berlin', image: 'https://images.unsplash.com/photo-1571935444382-b67f4c2087e4?w=100&q=80', date: 'Mar 20' },
+    { title: 'Ben UFO All Night Long', location: 'Panorama Bar, Berlin', image: '/img/ben_ufo_all_night_long.png', date: 'Mar 20' },
     { title: 'Modular Synthesis Workshop', location: 'With Alessandro Cortini', image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=100&q=80', date: 'Mar 25' },
     { title: 'Boiler Room x Everything Everywhere', location: 'New York', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&q=80', date: 'Mar 30' },
     { title: 'Ambient Night', location: 'Tokyo', image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=100&q=80', date: 'Apr 5' },
@@ -49,8 +49,8 @@ export function Home() {
   return (
     <div>
       <section id="cards">
-        <div className="grid md:grid-cols-3 md:gap-6 px-6">
-          <Link to="/store" className="card card-hover bg-gray-50" id="music">
+        <div className="grid md:grid-cols-3 md:gap-6 px-6 lg:pt-6 lg:pb-2 max-sm:pb-4">
+          <Link to="/store" className="card card-hover bg-gray-50 max-sm:py-2" id="music">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl text-3xl max-sm:text-xl">
                 <Store className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
@@ -60,7 +60,7 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/events" className="card card-hover bg-gray-50" id="events">
+          <Link to="/events" className="card card-hover bg-gray-50 max-sm:py-2" id="events">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
                 <Calendar className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
@@ -70,7 +70,7 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/forum" className="card card-hover mb-6 md:mb-0 bg-gray-50" id="forum">
+          <Link to="/forum" className="card card-hover bg-gray-50 max-sm:py-2" id="forum">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
                 <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
@@ -83,7 +83,7 @@ export function Home() {
       </section>
 
       <section id="banner">
-        <div className="p-4 border-b border-gray-200">
+        <div className="px-4 border-b border-gray-200 py-5">
           <div className="items-center justify-between grid md:grid-cols-3">
             <div className="flex items-center space-x-3 col-span-1 mb-1 mt-1">
               <img
@@ -95,13 +95,13 @@ export function Home() {
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <Radio className="w-8 h-8 ml-1" strokeWidth={0.8} />
+                <Radio className="w-8 h-8 max-sm:mr-0.5 lg:ml-1" strokeWidth={0.8} />
                 <span className="text-2xl tracking-tight ml-4 max-sm:text-xl max-sm:ml-3">CURRENTLY LIVE</span>
               </div>
             </div>
             <div className="col-span-1 mb-1 mt-1 ml-2">
               <div className="flex items-center text-sm">
-                <User className="w-8 h-8 ml-0.5" strokeWidth={0.8} />
+                <User className="w-8 h-8 max-sm:mr-0.5 lg:ml-1" strokeWidth={0.8} />
                 <Link to="/profile"
                       className="text-2xl tracking-tight ml-5 max-sm:text-xl max-sm:ml-3">
                   VIEW PROFILE
@@ -113,13 +113,13 @@ export function Home() {
       </section>
 
       <section id="feeds">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-          <div className="space-y-10" id="releases">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 max-sm:py-6 lg:py-8">
+          <div className="space-y-8 max-sm:mt-2" id="releases">
             <div className="flex items-center space-x-2 text-sm">
               <Music className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">LATEST RELEASES</h3>
             </div>
-            <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+            <div className="space-y-3 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {releases.map((release, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <img
@@ -136,7 +136,7 @@ export function Home() {
             </div>
           </div>
 
-          <div className="space-y-10" id="events">
+          <div className="space-y-8 max-sm:mt-3" id="events">
             <div className="flex items-center space-x-2 text-sm">
               <Calendar className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">UPCOMING EVENTS</h3>
@@ -162,7 +162,7 @@ export function Home() {
             </div>
           </div>
 
-          <div className="space-y-10" id="threads">
+          <div className="space-y-8 max-sm:mt-3" id="threads">
             <div className="flex items-center space-x-2 text-sm">
               <MessageCircle className="w-8 h-8 mr-2" strokeWidth={0.5} />
               <h3 className="font-medium text-gray-900">YOUR THREADS</h3>
