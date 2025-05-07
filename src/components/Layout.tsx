@@ -20,7 +20,7 @@ export function Layout() {
     <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
       <RadioPlayer />
       <nav className="bg-gray-100 sticky top-0 z-50">
-        <div id="nav" className="max-w-[1920px] mx-auto px-6">
+        <div id="nav" className="max-w-[1920px] mx-auto px-6 lg:py-4">
           <div className="flex items-center justify-between h-18">
             <div id="home" className="flex items-center">
               <Link to="/" className="font-display tracking-tight">
@@ -46,7 +46,7 @@ export function Layout() {
               </form>
             </div>
             
-            <div id="menu" className="hidden md:flex items-center space-x-8">
+            <div id="menu" className="hidden md:flex items-center space-x-2">
               <Link to="/forum" className="font-extrabold tracking-tight flex items-center">
                 <MessageSquare className="w-6 h-6 mr-2" strokeWidth={0.8} />
                 FORUM

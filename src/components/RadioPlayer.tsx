@@ -71,7 +71,7 @@ export function RadioPlayer() {
 
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-gray-800">
-      <div className="max-w-[1920px] mx-auto px-6">
+      <div className="max-w-[1920px] mx-auto px-6 py-4">
         <div className="flex items-center h-12">
           <div className="flex items-center space-x-4">
             <button
