@@ -79,7 +79,7 @@ export function RadioPlayer() {
               className="p-1.5 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors"
             >
               {isPlaying ? (
-                <Pause className="ml-2 w-4 h-4 text-black" />
+                <Pause className="w-6 h-6 text-black" />
               ) : (
                 <Play className="pl-1 w-6 h-6 text-black" />
               )}
