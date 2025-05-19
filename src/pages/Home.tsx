@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {Calendar, MessageCircle, MessageSquare, Music, Radio, Store, User} from 'lucide-react';
+import {Calendar, MessageCircle, Music, Radio, Store, User, Users} from 'lucide-react';
 
 export function Home() {
   const [showAllReleases, setShowAllReleases] = useState(false);
@@ -70,11 +70,11 @@ export function Home() {
             </div>
           </Link>
 
-          <Link to="/forum" className="card card-hover bg-gray-50 max-sm:py-2" id="forum">
+          <Link to="/community" className="card card-hover bg-gray-50 max-sm:py-2" id="forum">
             <div className="py-4 col-span-1">
               <h2 className="font-extrabold tracking-tight text-3xl max-sm:text-xl">
-                <MessageSquare className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
-                &nbsp;FORUM
+                <Users className="w-9 h-9 pb-2 mr-1.5" strokeWidth={0.5} />
+                &nbsp;COMMUNITY
               </h2>
               <p className="font-display tracking-tight">Join discussions with our community members</p>
             </div>
@@ -164,8 +164,8 @@ export function Home() {
 
           <div className="space-y-8 max-sm:mt-3" id="threads">
             <div className="flex items-center space-x-2 text-sm">
-              <MessageCircle className="w-8 h-8 mr-2" strokeWidth={0.5} />
-              <h3 className="font-medium text-gray-900">YOUR THREADS</h3>
+              <Users className="w-8 h-8 mr-2" strokeWidth={0.5} />
+              <h3 className="font-medium text-gray-900">RECENT ACTIVITY</h3>
             </div>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {threads.map((thread, index) => (
