@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Play, Pause, Volume2, VolumeX, ChevronDown } from 'lucide-react';
+import {Play, Pause, Volume2, VolumeX, ChevronDown, User} from 'lucide-react';
+import {Link} from "react-router-dom";
 
 interface Stream {
   id: string;
@@ -127,6 +128,11 @@ export function RadioPlayer() {
             src={selectedStream.url}
             preload="none"
           />
+          <div id="menu" className="hidden md:flex items-center space-x-2">
+            <Link to="/profile" className="font-extrabold tracking-tight">
+              <User className="w-8 h-8 text-white" strokeWidth={0.5} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

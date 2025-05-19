@@ -19,7 +19,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
       <RadioPlayer />
-      <nav className="bg-gray-100 sticky top-0 z-50">
+      <nav className="bg-gray-100 sticky top-0 z-40">
         <div id="nav" className="max-w-[1920px] mx-auto px-6 lg:py-4">
           <div className="flex items-center justify-between h-18">
             <div id="home" className="flex items-center">
@@ -29,8 +29,8 @@ export function Layout() {
               </Link>
             </div>
             
-            <div id="search" className="hidden md:flex flex-1 justify-center px-8">
-              <form onSubmit={handleSearch} className="w-full max-w-lg">
+            <div id="search" className="hidden md:flex flex-1 justify-end float-right">
+              <form onSubmit={handleSearch} className="w-full max-w-md">
                 <div className="relative">
                   <input
                     type="text"
@@ -44,28 +44,6 @@ export function Layout() {
                   </div>
                 </div>
               </form>
-            </div>
-            
-            <div id="menu" className="hidden md:flex items-center space-x-2">
-              <Link to="/forum" className="font-extrabold tracking-tight flex items-center">
-                <MessageSquare className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                FORUM
-              </Link>
-              <Link to="/store" className="font-extrabold tracking-tight flex items-center">
-                <Store className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                STORE
-              </Link>
-              <Link to="/events" className="font-extrabold tracking-tight flex items-center">
-                <Calendar className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                EVENTS
-              </Link>
-              <Link to="/community" className="font-extrabold tracking-tight flex items-center">
-                <Users className="w-6 h-6 mr-2" strokeWidth={0.8} />
-                COMMUNITY
-              </Link>
-              <Link to="/profile" className="font-extrabold tracking-tight">
-                <User className="w-8 h-8" strokeWidth={0.5} />
-              </Link>
             </div>
 
             <div className="md:hidden flex items-center space-x-4">

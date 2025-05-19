@@ -51,8 +51,7 @@
       }
     }
 
-    #home .text-lg,
-    #menu a {
+    #home .text-lg {
       color: black;
       font-size: 1.8rem;
     }
@@ -75,12 +74,6 @@
     #new-post,
     #cart {
       color: white;
-    }
-
-    #menu {
-      a:hover {
-        text-decoration: underline;
-      }
     }
 
     #banner {
